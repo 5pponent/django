@@ -2,11 +2,23 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <title>Blog posts</title>
 </head>
 
 <body>
-    <p>Django blog</p>
+    
+    <h2>Django blog</h4>
+
+    {% for p in posts %}
+        <div>
+            <hr/>
+            <a href="">{{ p.title }}</a>
+            <p>created: {{ p.created_date }}</p>
+        </div>
+    {% endfor %}
+
 </body>
 
 </html>
