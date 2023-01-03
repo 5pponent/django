@@ -5,7 +5,8 @@
         <div class="post">
             <h3><a href="{% url 'post_detail' pk=p.pk %}">{{ p.title }}</a></h3>
             <div class="date">
-                <p>created: {{ p.created_date }}</p>
+                <span>created: {{ p.created_date }}</span>
+                <a href="{% url 'post_delete' pk=p.pk %}" class="text-reset">delete</a>
             </div>
         </div>
     {% endfor %}
